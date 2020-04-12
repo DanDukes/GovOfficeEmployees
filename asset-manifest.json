@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gov-office-employee/static/css/main.5f361e03.chunk.css",
+    "main.js": "/gov-office-employee/static/js/main.2001cd39.chunk.js",
+    "main.js.map": "/gov-office-employee/static/js/main.2001cd39.chunk.js.map",
+    "runtime-main.js": "/gov-office-employee/static/js/runtime-main.4a12dacd.js",
+    "runtime-main.js.map": "/gov-office-employee/static/js/runtime-main.4a12dacd.js.map",
+    "static/js/2.ee2ea38e.chunk.js": "/gov-office-employee/static/js/2.ee2ea38e.chunk.js",
+    "static/js/2.ee2ea38e.chunk.js.map": "/gov-office-employee/static/js/2.ee2ea38e.chunk.js.map",
+    "index.html": "/gov-office-employee/index.html",
+    "precache-manifest.38c4d4d0aeb75f17493b1aaa8f1c5866.js": "/gov-office-employee/precache-manifest.38c4d4d0aeb75f17493b1aaa8f1c5866.js",
+    "service-worker.js": "/gov-office-employee/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/gov-office-employee/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.ee2ea38e.chunk.js.LICENSE.txt": "/gov-office-employee/static/js/2.ee2ea38e.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/gov-office-employee/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a12dacd.js",
+    "static/js/2.ee2ea38e.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.2001cd39.chunk.js"
+  ]
+}
