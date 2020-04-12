@@ -21,9 +21,7 @@ export default function Main() {
     //   console.log(filteredEmployees);
 
     // function to set the value of an eventHandler target to the searchTerm state
-    // prevent default in case called onSubmit
-    const handleInputChange = (e) => {
-        e.preventDefault();
+    const handleInputChange = e => {
         setSearchTerm(e.target.value);
     };
 
@@ -53,17 +51,29 @@ export default function Main() {
                 /* Check if the two rows should switch place,
                 based on the direction, asc or desc: */
                 if (dir === "asc") {
-                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() || (Number(x.innerHTML) > Number(y.innerHTML))) {
+                    if(typeof(x.innerHTML) === "string") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                    }
+                  } else {if ((Number(x.innerHTML) > Number(y.innerHTML))) {
                     // If so, mark as a switch and break the loop:
                     shouldSwitch = true;
                     break;
-                  }
+            }}
                 } else if (dir === "desc") {
-                  if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase() || (Number(x.innerHTML) < Number(y.innerHTML))) {
+                    if(typeof(x.innerHTML) === "string") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                    }
+                  } else {if ((Number(x.innerHTML) < Number(y.innerHTML))) {
                     // If so, mark as a switch and break the loop:
                     shouldSwitch = true;
                     break;
-                  }
+            }}
                 }
               }
               if (shouldSwitch) {
