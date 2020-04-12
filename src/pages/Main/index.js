@@ -7,6 +7,7 @@ import Employees from "../../utils/Employee.json";
 export default function Main() {
     //Set up initial State(s) with Hooks
     const [searchTerm, setSearchTerm] = useState("");
+    const [activePage, setActivePage] = useState("react")
     //  setSearch("Cox");
 
     //Create a filter function to sort through relevant data fields
@@ -24,6 +25,11 @@ export default function Main() {
     const handleInputChange = e => {
         setSearchTerm(e.target.value);
     };
+
+    const handleActiveChange = e => {
+      e.preventDefault();
+      setActivePage(e.target.id);
+  };
 
     // sort columns button function
     //shamelessly lifted from https://www.w3schools.com/howto/howto_js_sort_table.asp
@@ -96,7 +102,7 @@ export default function Main() {
 
     return (
         <div>
-        <Navbar />
+        <Navbar active={activePage} handleActiveChange={handleActiveChange} />
         <SearchBox handleInputChange={handleInputChange} results={searchTerm} />
         <Table Employees={filteredEmployees}
         handleSortBtn={handleSortField}/> 
