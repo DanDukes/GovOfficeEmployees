@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar(props) {
     return (
-  <nav className="nav-extended grey">
+  <nav className="nav-extended blue-grey">
   <br/>
     <div className="nav-wrapper center-align">
       <h3 className="center-align">Utah Governor's Office</h3>

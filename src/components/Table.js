@@ -3,7 +3,7 @@ import React from 'react'
 export default function Table(props) {
     return (
         <div className="card">
-        <table id="EmployeeTable">
+        <table id="EmployeeTable" className="highlight blue-grey lighten-4">
           <thead>
             <tr>
               {/* clickable table columns to sort by ascending or descending order */}
