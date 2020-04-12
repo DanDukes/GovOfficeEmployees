@@ -8,12 +8,18 @@ export default function Main() {
     const [search, setSearch] = useState("");
     const [sortedField, setSortedField] = useState("");
 
-    setSearch("Cox");
+  //  setSearch("Cox");
 
     //Filter method from https://scotch.io/tutorials/quick-and-simple-search-filter-using-vanilla-javascript
-    let filteredName = Employees.filter(target => target["Employee_Name"].toLowerCase().includes(search.toLowerCase()));
+    const filteredEmployees = Employees.filter((target) => {
+    return (
+    target["Employee_Name"].toLowerCase().includes(search.toLowerCase()) ||
+    target["eid"].toString().includes(search.toString()) ||
+    target["Class_Title"].toLowerCase().includes(search.toLowerCase())
+    );
+    });
 
-    console.log(filteredName);
+ //   console.log(filteredName);
 
     return (
         <div>
