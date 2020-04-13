@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route,  } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
 import ReactTable from "./pages/ReactTable";
@@ -8,7 +8,7 @@ import MaterialUi from "./pages/MaterialUi";
 function App() {
   return (
     <div className="container">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
         <Navbar/>
         <Route exact path="/GovOfficeEmployees" component={Main}/>
