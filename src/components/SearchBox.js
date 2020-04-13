@@ -11,7 +11,7 @@ const prevent = e => {
         <form className="search" onSubmit={prevent}>
         <div className="input-field">
           <input
-            value={props.searchTerm}
+            value={props.results}
             onChange={props.handleInputChange}
             name="term"
             list="term"

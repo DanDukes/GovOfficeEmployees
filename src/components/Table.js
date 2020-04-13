@@ -7,22 +7,22 @@ export default function Table(props) {
           <thead>
             <tr>
               {/* clickable table columns to sort by ascending or descending order */}
-              <th onClick={() => props.handleSortBtn(0)}>
+              <th onClick={() => props.handleSortNumber(0)}>
                 EID{" "}
               </th>
-              <th onClick={() => props.handleSortBtn(1)}>
+              <th onClick={() => props.handleSortString(1)}>
                 Name{" "}
               </th>
-              <th onClick={() => props.handleSortBtn(2)}>
+              <th onClick={() => props.handleSortString(2)}>
                 Title{" "}
               </th>
-              <th onClick={() => props.handleSortBtn(3)}>
+              <th onClick={() => props.handleSortNumber(3)}>
                 Wages{" "}
               </th>
-              <th onClick={() => props.handleSortBtn(4)}>
+              <th onClick={() => props.handleSortNumber(4)}>
                 Benefits{" "}
               </th>
-              <th onClick={() => props.handleSortBtn(5)}>
+              <th onClick={() => props.handleSortNumber(5)}>
                 Compensation{" "}
               </th>
             </tr>
@@ -34,9 +34,9 @@ export default function Table(props) {
                 <td>{e.eid}</td>
                 <td>{e.Employee_Name}</td>
                 <td>{e.Class_Title}</td>
-                <td>{e.Wages}</td>
-                <td>{e.Benefits}</td>
-                <td>{e.Compensation}</td>
+                <td>{Number(e.Wages)}</td>
+                <td>{Number(e.Benefits)}</td>
+                <td>{Number(e.Compensation)}</td>
               </tr>
             </tbody>
           ))}

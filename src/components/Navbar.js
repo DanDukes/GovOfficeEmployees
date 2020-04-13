@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-export default function Navbar(props) {
+export default function Navbar() {
     return (
   <nav className="nav-extended blue-grey">
   <br/>
@@ -11,9 +12,19 @@ export default function Navbar(props) {
     <br/>
     <div className="nav-content">
       <ul className="tabs tabs-transparent">
-        <li className="tab"><a href="/react" id="react" onClick={props.handleActiveChange}>React</a></li>
-        <li className="tab"><a href="/react-table" id="reactTable" onClick={props.handleActiveChange}>React-Table</a></li>
-        <li className="tab"><a href="/material-ui" id="materialUI" onClick={props.handleActiveChange}>Material-UI</a></li>
+        <li className="tab"><Link to="/react" className={
+                window.location.pathname === "/react"
+                  ? "nav-link active"
+                  : "nav-link"
+              }>
+          React
+        </Link></li>
+        <li className="tab"><Link to="/react-table">
+          React-Table
+        </Link></li>
+        <li className="tab"><Link to="/material-ui">
+          Material UI
+        </Link></li>
       </ul>
     </div>
   </nav>
