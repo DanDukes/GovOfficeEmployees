@@ -97,7 +97,7 @@ function DefaultColumnFilter({
     <input
       value={filterValue || ''}
       onChange={e => {
-        setFilter(e.target.value || undefined) // Set undefined to remove the filter entirely
+        setFilter(undefined) // Set undefined to remove the filter entirely
       }}
       placeholder={`Search ${count} records...`}
     />
@@ -106,36 +106,36 @@ function DefaultColumnFilter({
 
 // This is a custom filter UI for selecting
 // a unique option from a list
-function SelectColumnFilter({
-  column: { filterValue, setFilter, preFilteredRows, id },
-}) {
-  // Calculate the options for filtering
-  // using the preFilteredRows
-  const options = React.useMemo(() => {
-    const options = new Set()
-    preFilteredRows.forEach(row => {
-      options.add(row.values[id])
-    })
-    return [...options.values()]
-  }, [id, preFilteredRows])
+// function SelectColumnFilter({
+//   column: { filterValue, setFilter, preFilteredRows, id },
+// }) {
+//   // Calculate the options for filtering
+//   // using the preFilteredRows
+//   const options = React.useMemo(() => {
+//     const options = new Set()
+//     preFilteredRows.forEach(row => {
+//       options.add(row.values[id])
+//     })
+//     return [...options.values()]
+//   }, [id, preFilteredRows])
 
-  // Render a multi-select box
-  return (
-    <select
-      value={filterValue}
-      onChange={e => {
-        setFilter(e.target.value || undefined)
-      }}
-    >
-      <option value="">All</option>
-      {options.map((option, i) => (
-        <option key={i} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
-  )
-}
+//   // Render a multi-select box
+//   return (
+//     <select
+//       value={filterValue}
+//       onChange={e => {
+//         setFilter(e.target.value || undefined)
+//       }}
+//     >
+//       <option value="">All</option>
+//       {options.map((option, i) => (
+//         <option key={i} value={option}>
+//           {option}
+//         </option>
+//       ))}
+//     </select>
+//   )
+// }
 
 // This is a custom filter UI that uses a
 // slider to set the filter value between a column's
@@ -506,22 +506,22 @@ function roundedMedian(leafValues) {
   return Math.round((min + max) / 2)
 }
 
-const IndeterminateCheckbox = React.forwardRef(
-  ({ indeterminate, ...rest }, ref) => {
-    const defaultRef = React.useRef()
-    const resolvedRef = ref || defaultRef
+// const IndeterminateCheckbox = React.forwardRef(
+//   ({ indeterminate, ...rest }, ref) => {
+//     const defaultRef = React.useRef()
+//     const resolvedRef = ref || defaultRef
 
-    React.useEffect(() => {
-      resolvedRef.current.indeterminate = indeterminate
-    }, [resolvedRef, indeterminate])
+//     React.useEffect(() => {
+//       resolvedRef.current.indeterminate = indeterminate
+//     }, [resolvedRef, indeterminate])
 
-    return (
-      <>
-        <input type="checkbox" ref={resolvedRef} {...rest} />
-      </>
-    )
-  }
-)
+//     return (
+//       <>
+//         <input type="checkbox" ref={resolvedRef} {...rest} />
+//       </>
+//     )
+//   }
+// )
 
 export default function ReactTable() {
   const columns = React.useMemo(
@@ -532,6 +532,7 @@ export default function ReactTable() {
           {
             Header: 'EID',
             accessor: 'eid',
+            filter: "",
           },
           {
             Header: 'Name',
