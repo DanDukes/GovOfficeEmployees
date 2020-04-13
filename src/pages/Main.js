@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Employees from "../../utils/Employee.json";
-import SearchBox from "../../components/SearchBox";
-import Table from "../../components/Table";
+import Employees from "../utils/Employee.json";
+import SearchBox from "../components/SearchBox";
+import Table from "../components/Table";
 
 export default function Main() {
     //Set up initial State(s) with Hooks
