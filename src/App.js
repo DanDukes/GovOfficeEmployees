@@ -8,7 +8,7 @@ import MaterialUi from "./pages/MaterialUi";
 function App() {
   return (
     <div className="container">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div>
         <Navbar/>
         <Route exact path="/GovOfficeEmployees" component={Main}/>
