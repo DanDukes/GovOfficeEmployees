@@ -11,6 +11,7 @@ function App() {
       <Router>
         <div>
         <Navbar/>
+        <Route exact path="/" component={Main}/>
         <Route exact path="/react" component={Main}/>
         <Route exact path="/react-table" component={ReactTable} />
         <Route exact path="/material-ui" component={MaterialUi} />

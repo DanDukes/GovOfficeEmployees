@@ -13,16 +13,24 @@ export default function Navbar() {
     <div className="nav-content">
       <ul className="tabs tabs-transparent">
         <li className="tab"><Link to="/react" className={
-                window.location.pathname === "/react"
+                window.location.pathname === "/" || window.location.pathname === "/react"
                   ? "nav-link active"
                   : "nav-link"
               }>
           React
         </Link></li>
-        <li className="tab"><Link to="/react-table">
+        <li className="tab"><Link to="/react-table" className={
+                window.location.pathname === "/react-table"
+                  ? "nav-link active"
+                  : "nav-link"
+              }>
           React-Table
         </Link></li>
-        <li className="tab"><Link to="/material-ui">
+        <li className="tab"><Link to="/material-ui" className={
+                window.location.pathname === "/material-ui"
+                  ? "nav-link active"
+                  : "nav-link"
+              }>
           Material UI
         </Link></li>
       </ul>
