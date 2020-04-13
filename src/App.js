@@ -12,9 +12,9 @@ function App() {
         <div>
         <Navbar/>
         <Route exact path="/GovOfficeEmployees" component={Main}/>
-        <Route exact path="/react" component={Main}/>
-        <Route exact path="/react-table" component={ReactTable} />
-        <Route exact path="/material-ui" component={MaterialUi} />
+        <Route exact path="/GovOfficeEmployees/react" component={Main}/>
+        <Route exact path="/GovOfficeEmployees/react-table" component={ReactTable} />
+        <Route exact path="/GovOfficeEmployees/material-ui" component={MaterialUi} />
         </div>
         </Router>
     </div>
