@@ -1,8 +1,8 @@
 {
   "name": "GovOfficeEmployees",
-  "homepage": "https://dandukes.github.io/GovOfficeEmployees",
+  "homepage": "dandukes.github.io/GovOfficeEmployees",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
@@ -12,6 +12,7 @@
     "match-sorter": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-table": "^7.0.4",
     "styled-components": "^5.1.0"
